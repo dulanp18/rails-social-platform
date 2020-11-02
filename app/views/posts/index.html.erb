@@ -1,0 +1,18 @@
+<div class="container">
+
+
+<%= simple_form_for @post do |f| %>
+  <%= f.input :body %>
+  <%= f.button :submit %>
+<% end %>
+
+<% if @posts.length >= 1 %>
+  <% @posts.each do |post| %>
+    <div>
+      <%= post.body  %>
+    </div>
+  <% end %>
+<% end %>
+
+
+</div>
